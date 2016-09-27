@@ -6,6 +6,7 @@ from StringIO import StringIO
 from PIL import Image
 from pygame.locals import*
 
+# function to check if an image is evenly divisible by requested pixel size
 def evenPixelDivision(width, height, pixelSize):
     if width % pixelSize != 0 or height % pixelSize != 0:
         print "ERROR: New pixel size is not an even multiple of the input image dimensions"
@@ -13,6 +14,7 @@ def evenPixelDivision(width, height, pixelSize):
         return False
     return True
 
+# function to calculate the average color for a square area of a given size
 def getAverageSurroundingColor(x, y, pixelSize, image):
     rSum = 0
     gSum = 0
@@ -37,6 +39,7 @@ def getAverageSurroundingColor(x, y, pixelSize, image):
     # print rAvg, gAvg, bAvg, aAvg
     return (bAvg, gAvg, rAvg, aAvg)
 
+# main blurring function, given image and specified pixel size
 def blurImage(filename, newPixelSize):
     pygame.init()
     inputImage = pygame.image.load(filename)
@@ -58,7 +61,6 @@ def blurImage(filename, newPixelSize):
         for col in range(newHeight):
             replacementColor = getAverageSurroundingColor(row * newPixelSize, col * newPixelSize, newPixelSize, croppedImage)
             if replacementColor[1] != 255:
-                print replacementColor
             for subRow in range(newPixelSize):
                 for subCol in range(newPixelSize):
                     croppedImage.set_at(((row * newPixelSize + subRow), (col * newPixelSize + subCol)), replacementColor)
@@ -70,6 +72,7 @@ def printUsage():
     print "python blur [filename.png] [pixelSize]"
     print "Ex. python blur test.png 4"
 
+# print usage if needed, otherwise blur a given image with the specified settings
 def main(argv):
     if len(argv) == 0:
         printUsage()
