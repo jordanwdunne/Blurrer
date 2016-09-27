@@ -39,20 +39,20 @@ The resulting image was pixellated, with the end result composed of 35x35 pixel 
 
 ![Blurred Mario Mushroom][blurredMushroom]
 
-[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/test.pngblurred_35.png "Blurred Mario Mushroom"
+[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/blurred_35_test.png "Blurred Mario Mushroom"
 
 ## Another example (with cropping being necessary)
 
 If a specified pixel size isn't evenly divisible into the input image's dimensions, then the result needs to be cropped so no partial pixels are present.
 
-As an example, again relying on the Mario mushroom picture, we will specify a pixel size of 200. This isn't evenly divisible, so cropping will occur to the nearest full pixel of that size.
+As an example, again relying on the Mario mushroom picture, we will specify a pixel size of 60. This isn't evenly divisible, so cropping will occur to the nearest full pixel of that size.
 
 ```
-python blur.py blur test.png 200
+python blur.py blur test.png 60
 ```
 
-The resulting image was pixellated, with the end result composed of 35x35 pixel squares:
+The resulting image was pixellated, with the end result composed of 60x60 pixel squares, and has been cropped (it's now 11 by 8 "pixels")
 
 ![Blurred Mario Mushroom][blurredMushroom]
 
-[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/test.pngblurred_35.png "Blurred Mario Mushroom"
+[blurredMushroom]: https://github.com/jordanwdunne/Blurrer/blob/master/blurred_60_test.png "Blurred Mario Mushroom"
