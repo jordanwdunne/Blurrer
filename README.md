@@ -23,14 +23,36 @@ Pixellated art should end up with an whole number of vertical and horizontal pix
 
 Here's a 700x500 image of a Mario Mushroom from Wikipedia:
 
-![Mario Mushroom][logo]
+![Mario Mushroom][mushroom]
 
-[logo]: https://github.com/jordanwdunne/8bitify/test.png "Mario Mushroom"
+[mushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/test.png "Mario Mushroom"
 
-I want to pixellate this photo, with the resulting picture having square 35x35 pixels.
+The goal is to pixellate this photo, with the resulting picture having square 35x35 pixels.
 
 To make this happen, the following command line arguments are used:
 
 ```
 python blur.py blur test.png 35
 ```
+
+The resulting image was pixellated, with the end result composed of 35x35 pixel squares:
+
+![Blurred Mario Mushroom][blurredMushroom]
+
+[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/test.pngblurred_35.png "Blurred Mario Mushroom"
+
+## Another example (with cropping being necessary)
+
+If a specified pixel size isn't evenly divisible into the input image's dimensions, then the result needs to be cropped so no partial pixels are present.
+
+As an example, again relying on the Mario mushroom picture, we will specify a pixel size of 200. This isn't evenly divisible, so cropping will occur to the nearest full pixel of that size.
+
+```
+python blur.py blur test.png 200
+```
+
+The resulting image was pixellated, with the end result composed of 35x35 pixel squares:
+
+![Blurred Mario Mushroom][blurredMushroom]
+
+[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/test.pngblurred_35.png "Blurred Mario Mushroom"

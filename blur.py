@@ -63,7 +63,7 @@ def blurImage(filename, newPixelSize):
                 for subCol in range(newPixelSize):
                     croppedImage.set_at(((row * newPixelSize + subRow), (col * newPixelSize + subCol)), replacementColor)
 
-    pygame.image.save(croppedImage, str(filename + "blurred_" + str(newPixelSize) + ".png"))
+    pygame.image.save(croppedImage, str("blurred_" + str(newPixelSize) + "_" + filename))
 
 def printUsage():
     print "Usage:"
