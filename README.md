@@ -2,7 +2,7 @@
 
 I like 8 bit art, and I wanted to make an easy method for pixellating existing images from the command line.
 
-## With 8bitify, you can:
+## With this script, you can:
 
 - Convert images of common filetypes to pixellated versions
 - Specify the size of the pixels to be used in the resulting image
