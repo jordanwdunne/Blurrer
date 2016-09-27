@@ -37,9 +37,9 @@ python blur.py blur test.png 35
 
 The resulting image was pixellated, with the end result composed of 35x35 pixel squares:
 
-![Blurred Mario Mushroom][blurredMushroom]
+![Blurred Mario Mushroom][blurred35Mushroom]
 
-[blurredMushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/blurred_35_test.png "Blurred Mario Mushroom"
+[blurred35Mushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/blurred_35_test.png "Blurred Mario Mushroom"
 
 ## Another example (with cropping being necessary)
 
@@ -53,6 +53,14 @@ python blur.py blur test.png 60
 
 The resulting image was pixellated, with the end result composed of 60x60 pixel squares, and has been cropped (it's now 11 by 8 "pixels")
 
-![Blurred Mario Mushroom][blurredMushroom]
+![Blurred Mario Mushroom][blurred60Mushroom]
 
-[blurredMushroom]: https://github.com/jordanwdunne/Blurrer/blob/master/blurred_60_test.png "Blurred Mario Mushroom"
+[blurred60Mushroom]: https://raw.githubusercontent.com/jordanwdunne/Blurrer/master/blurred_60_test.png "Blurred Mario Mushroom"
+
+As of now, cropping will only occur from the right and bottom edges of a photo (note that the 60x60 blurred image seems shifted to the bottom right)
+
+## Todos:
+
+- Correct shifting in cropped images (crop evenly from the center)
+- Add support for other filetypes
+- Add support for animated GIF blurring and recomposition
