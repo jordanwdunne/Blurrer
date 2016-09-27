@@ -1,4 +1,4 @@
-# 8bitify
+# Blurrer
 
 I like 8 bit art, and I wanted to make an easy method for pixellating existing images from the command line.
 
@@ -21,4 +21,16 @@ Pixellated art should end up with an whole number of vertical and horizontal pix
 
 ## An example
 
-[logo]: https://github.com/jordanwdunne/8bitify/test.png "Logo Title Text 2"
+Here's a 700x500 image of a Mario Mushroom from Wikipedia:
+
+![Mario Mushroom][logo]
+
+[logo]: https://github.com/jordanwdunne/8bitify/test.png "Mario Mushroom"
+
+I want to pixellate this photo, with the resulting picture having square 35x35 pixels.
+
+To make this happen, the following command line arguments are used:
+
+```
+python blur.py blur test.png 35
+```
