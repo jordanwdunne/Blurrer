@@ -21,7 +21,7 @@ Pixellated art should end up with an whole number of vertical and horizontal pix
 
 ## An example
 
-Here's a 700x500 image of a Mario Mushroom from Wikipedia:
+Here's a 700x700 image of a Mario Mushroom from Wikipedia:
 
 ![Mario Mushroom][mushroom]
 
@@ -59,7 +59,7 @@ The resulting image was pixellated, with the end result composed of 60x60 pixel 
 
 As of now, cropping will only occur from the right and bottom edges of a photo (note that the 60x60 blurred image seems shifted to the bottom right)
 
-## Todos:
+## To-dos:
 
 - Correct shifting in cropped images (crop evenly from the center)
 - Add support for other filetypes
